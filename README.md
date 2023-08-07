@@ -1,2 +1,2 @@
-# KeeBox
+# Keebox
 A all in one keyboard testing and managment tool
