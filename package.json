@@ -5,22 +5,23 @@
     "author": "ShyAssassin <49711232+ShyAssassin@users.noreply.github.com>",
     "license": "GPLv3",
     "scripts": {
-        "tauri": "tauri",
+        "tauri": "cross-env TAURI_BUILD=1 tauri",
         "dev": "next dev -H 127.0.0.1 -p 4242",
         "build": "next build",
         "start": "next start"
     },
     "dependencies": {
+        "@tauri-apps/api": "^1.4.0",
         "next": "^13.4.13",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "@tauri-apps/api": "^1.4.0"
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
         "@svgr/webpack": "^8.0.1",
         "@tauri-apps/cli": "^1.4.0",
         "@types/node": "20.4.8",
         "@types/react": "18.2.18",
+        "cross-env": "^7.0.3",
         "prettier": "^3.0.1",
         "typescript": "5.1.6"
     }

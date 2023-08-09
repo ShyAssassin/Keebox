@@ -5,7 +5,7 @@ const nextConfig = {
     reactStrictMode: true,
     trailingSlash: false,
     distDir: ".next",
-    output: "export",
+    output: process.env.TAURI_BUILD ? "export" : undefined,
     devIndicators: {
         buildActivity: true,
         buildActivityPosition: "bottom-right"
