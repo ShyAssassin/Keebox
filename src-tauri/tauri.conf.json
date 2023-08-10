@@ -13,11 +13,24 @@
     "tauri": {
         "windows": [
             {
+                "url": "splashscreen.html",
+                "label": "splashscreen",
+                "width": 500,
+                "height": 300,
+                "center": true,
+                "visible": true,
+                "resizable": false,
                 "fullscreen": false,
-                "height": 600,
-                "resizable": true,
+                "decorations": false
+            },
+            {
                 "title": "Keebox",
-                "width": 800
+                "width": 800,
+                "height": 600,
+                "center": true,
+                "visible": false,
+                "resizable": true,
+                "fullscreen": false
             }
         ],
         "bundle": {
