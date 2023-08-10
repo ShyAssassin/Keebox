@@ -1,10 +1,15 @@
+import { Box, Text, Center } from "@chakra-ui/react";
 import Greet from "@components/greet";
 
 export default function Index() {
     return (
-        <div>
-            <h1>Hello World!</h1>
+        <Box>
+            <Center>
+                <Text fontSize={"6xl"} fontWeight={"semibold"}>
+                    Hello World!
+                </Text>
+            </Center>
             <Greet />
-        </div>
+        </Box>
     );
 }

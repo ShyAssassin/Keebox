@@ -4,7 +4,8 @@
         "beforeBuildCommand": "npm run build",
         "beforeDevCommand": "npm run dev",
         "devPath": "http://localhost:4242",
-        "distDir": "../out"
+        "distDir": "../out",
+        "withGlobalTauri": true
     },
     "package": {
         "productName": "keebox",
