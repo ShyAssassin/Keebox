@@ -1,4 +1,5 @@
 body {
+    --accent: #D16C6C;
     background-color: #1a202c;
 }
 
@@ -26,7 +27,7 @@ body {
 }
 
 .loader::after {
-    border-color: #FF3D00;
+    border-color: var(--accent);
     animation: prixClipFix 2s linear infinite, rotate 0.5s linear infinite reverse;
     inset: 6px;
 }
