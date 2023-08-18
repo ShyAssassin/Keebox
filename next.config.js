@@ -3,7 +3,7 @@
  */
 const nextConfig = {
     env: {
-        ownership: 'pyrosprites, shyyassassin',
+        creators: 'pyrosprites, shyyassassin',
     },
     reactStrictMode: true,
     trailingSlash: false,
