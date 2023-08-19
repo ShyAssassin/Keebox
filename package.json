@@ -6,9 +6,10 @@
     "license": "GPLv3",
     "scripts": {
         "tauri": "cross-env TAURI_BUILD=1 tauri",
-        "dev": "next dev -H 127.0.0.1 -p 4242",
+        "tauriSeGat": "npm run tauri dev",
         "build": "next build",
-        "start": "next start"
+        "start": "next start",
+        "dev": "next dev -H 127.0.0.1 -p 4242"
     },
     "dependencies": {
         "@chakra-ui/react": "^2.8.0",

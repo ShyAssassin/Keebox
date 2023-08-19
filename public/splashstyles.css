@@ -1,0 +1,130 @@
+body {
+    --accent: #874caa;
+    background-color: transparent;
+    background-image: url('./assets/Space\ Background.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: system-ui, -apple-system;
+}
+
+::selection {
+    background: var(--accent);
+}
+
+@font-face {
+    font-family: monogram;
+    src: url('./assets/font/monogram.ttf');
+}
+
+
+.loader-container {
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    background-color: violet;
+    position: absolute;
+    animation: loadingAnimation 1.5s linear infinite;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a202c67;
+    backdrop-filter: blur(16px);
+    padding: 15px 30px;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 60px);
+}
+
+.brand {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    color: white;
+    padding-right: 15px;
+}
+
+.brand span {
+    opacity: 0.4;
+}
+
+.brand img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    opacity: 1;
+}
+
+
+.creators {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    opacity: 0.4;
+}
+
+.creators ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.creators li {
+    display: inline;
+}
+
+.creators a {
+    text-decoration: none;
+    color: white;
+}
+
+.creators a:hover {
+    text-decoration: underline;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    font-family: monogram;
+    font-size: 64px;
+    transition: all 0.4s;
+    opacity: 0.4;
+}
+
+.close-btn:hover {
+    color: var(--accent);
+    transform: scale(1.35);
+    text-decoration: none;
+    opacity: 1;
+}

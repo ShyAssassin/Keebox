@@ -2,6 +2,9 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
+    env: {
+        creators: 'pyrosprites, shyyassassin',
+    },
     reactStrictMode: true,
     trailingSlash: false,
     distDir: ".next",
