@@ -1,6 +1,6 @@
-import { invoke } from "@tauri-apps/api/tauri";
 import { useState } from "react";
 import { Input, Box, HStack, Button, Center, VStack } from "@chakra-ui/react";
+import { greet, tauriAvailable } from "@lib/tauri";
 
 export default function Greet() {
     let [input, setInput] = useState<string>("");
@@ -12,8 +12,10 @@ export default function Greet() {
                     <Input type="text" value={input} onChange={e => setInput(e.target.value)} />
                     <VStack>
                         <Button
+                            isDisabled={!tauriAvailable()}
                             onClick={() => {
-                                invoke("greet", { name: input }).then((message: string) => {
+                                greet(input).then((message: string) => {
+                                    console.log(message);
                                     setOutput(message);
                                 });
                             }}>

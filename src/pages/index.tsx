@@ -1,6 +1,8 @@
 import { Box, Text, Center } from "@chakra-ui/react";
-import Greet from "@components/greet";
+import dynamic from "next/dynamic";
+// import Greet from "@components/greet";
 
+const Greet = dynamic(() => import("@components/greet"), { ssr: false });
 export default function Index() {
     return (
         <Box>

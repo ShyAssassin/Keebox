@@ -1,13 +1,12 @@
 import Head from "next/head";
 import type { AppProps } from "next/app";
-import { invoke } from "@tauri-apps/api/tauri";
 import theme from "@lib/theme";
 import { ChakraProvider } from "@chakra-ui/react";
+import { setFrontendReady } from "@lib/tauri";
 
 if (typeof window !== "undefined") {
-    // FIXME: dont shit yourself if tauri isnt present
     document.addEventListener("DOMContentLoaded", () => {
-        invoke<void>("plugin:splashscreen|set_frontend_ready").then(() => {
+        setFrontendReady().then(() => {
             console.log("Frontend Initialised");
         });
     });
