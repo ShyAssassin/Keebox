@@ -1,6 +1,6 @@
 import { Box, Text, Center } from "@chakra-ui/react";
-import BtmDock from "@components/dock/BtmDock";
 
+const Greet = dynamic(() => import("@components/greet"), { ssr: false });
 export default function Index() {
     return (
         <Box>
@@ -9,7 +9,6 @@ export default function Index() {
                     Hello World!
                 </Text>
             </Center>
-            <BtmDock />
         </Box>
     );
 }
